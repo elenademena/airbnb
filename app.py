@@ -93,7 +93,7 @@ with col3:
 tab1, tab2 = st.tabs(["Main Analysis", "Extra Analysis"])
 
 with tab1:
-    st.subheader("Listing type vs number of people")
+    st.subheader("Listing type vs Number of people")
 
     if "room_type" in filtered_df.columns and "accommodates" in filtered_df.columns:
         chart_data = filtered_df.groupby("room_type")["accommodates"].mean().sort_values()
@@ -117,13 +117,13 @@ with tab1:
         st.pyplot(fig)
 
 with tab2:
-    st.subheader("Reviews vs price")
+    st.subheader("Reviews vs Price")
     if "number_of_reviews" in filtered_df.columns and "price" in filtered_df.columns:
         fig, ax = plt.subplots()
         ax.scatter(filtered_df["number_of_reviews"], filtered_df["price"])
         ax.set_xlabel("Number of reviews")
         ax.set_ylabel("Price")
-        ax.set_title("Number of reviews vs price")
+        ax.set_title("Number of reviews vs Price")
         st.pyplot(fig)
 
     st.subheader("Top neighborhoods by reviews per month")
