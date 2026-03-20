@@ -24,7 +24,7 @@ def load_data():
 
 df = load_data()
 
-st.title("Elena Demena")
+st.title("Elena de Mena")
 st.subheader("Airbnb Dashboard")
 
 st.sidebar.header("Filters")
